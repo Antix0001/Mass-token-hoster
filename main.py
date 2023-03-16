@@ -42,9 +42,11 @@ def x(Token):
 for tkn in tkns:
   x(tkn)
 payload = {"text": text,"emoji_name": emoji, "emoji_id": int(emoji_id)}
+xxx = random.choice(["online","dnd","idle"])
+
 def antix(Token):
   headers = {"Authorization":Token,"content-type":"application/json"}
-  r = requests.patch("https://discord.com/api/v9/users/@me/settings",headers=headers,json={"status": "idle", "custom_status": payload})
+  r = requests.patch("https://discord.com/api/v9/users/@me/settings",headers=headers,json={"status": xxx, "custom_status": payload})
   
 time.sleep(3)
 clear()
