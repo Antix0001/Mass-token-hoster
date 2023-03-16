@@ -2,7 +2,6 @@ import pyarmor, json, asyncio, sys, requests, os, threading, time, yaml, random
 import discord
 from json import dumps
 from colored import fg, attr
-from dhooks import Webhook, Webhook
 
 config = yaml.safe_load(open("config.yml"))["settings"]
 text = config['status']
